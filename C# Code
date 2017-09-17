@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _20.Histograme
+{
+    class histograme
+    {
+        static void Main(string[] args)
+        {
+            int number = int.Parse(Console.ReadLine());
+            double p1 = 0;
+            double p2 = 0;
+            double p3 = 0;
+            double p4 = 0;
+            double p5 = 0;
+            for (int i = 0; i < number; i++)
+            {
+                int needNumber = int.Parse(Console.ReadLine());
+                if (needNumber < 200)
+                {
+                    p1 += 1;
+                }
+                else if (needNumber >= 200 && needNumber < 400)
+                {
+                    p2 += 1;
+                }
+                else if (needNumber >= 400 && needNumber < 600)
+                {
+                    p3 += 1;
+                }
+                else if (needNumber >= 600 && needNumber < 800)
+                {
+                    p4 += 1;
+                }
+                else
+                {
+                    p5 += 1;
+                }
+               
+            }
+            Console.WriteLine("{0:p2}",p1/number);
+            Console.WriteLine("{0:p2}",p2/number);
+            Console.WriteLine("{0:p2}",p3/number);
+            Console.WriteLine("{0:p2}",p4/number);
+            Console.WriteLine("{0:p2}",p5/number);
+            
+
+        }
+    }
+}
